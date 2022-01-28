@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Sarala:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Sarala:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: 700 14px "Sarala", sans-serif;
+  color: #1D3557;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1D3557;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todos-title {
+  font: 700 36px "Montserrat", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.todo-app--container {
   min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.todo-app--container .todo-app--components-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px;
+  margin-left: -35px;
 }
 
-.App-link {
-  color: #61dafb;
+.todos-container {
+  border: 1px solid #000;
+  width: 485px;
+  padding: 32px;
+  height: 595px;
+  margin-top: -10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todos-container .todos-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  width: 100%;
 }
+
+.todos-container .todos-list-container .todo-item-container {
+  padding: 8px;
+  position: relative;
+  padding-left: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.todos-container .todos-list-container .todo-item-container .todo-item {
+  cursor: pointer;
+}
+
+.todos-container .todos-list-container .todo-item-container .todo-item--icon {
+  display: none;
+}
+
+.todos-container .todos-list-container .todo-item-container .todo-item--icon .anticon svg {
+  fill: #2DC653 !important;
+}
+
+.todos-container .todos-list-container .todo-item-container .todo-actions {
+  display: none;
+}
+
+.todos-container .todos-list-container .todo-item-container:hover {
+  background: #F1FAEE;
+}
+
+.todos-container .todos-list-container .todo-item-container:hover .todo-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.todos-container .todos-list-container .todo-item-container:hover .todo-actions .anticon svg {
+  fill: #E63946 !important;
+  opacity: 0.6;
+}
+
+.todos-container .todos-list-container .todo-item-container:hover .todo-actions:hover .anticon svg {
+  fill: #E63946 !important;
+  opacity: 1;
+}
+
+.todos-container .todos-list-container .todo-completed .todo-item--icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  position: absolute;
+  left: 8px;
+  top: 12px;
+}
+
+.todos-container .todos-list-container .todo-completed .todo-item--item {
+  opacity: 0.6;
+}
+/*# sourceMappingURL=App.css.map */

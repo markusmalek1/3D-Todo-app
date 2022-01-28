@@ -1,9 +1,16 @@
 import "./App.css";
+import MyTodos from "./views/todos/MyTodos";
+import background from "./assets/img/setup_1.jpg";
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div
+      className="todo-app--container"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="todo-app--components-container">
+        <MyTodos />
+      </div>
     </div>
   );
 }

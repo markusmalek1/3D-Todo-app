@@ -1,0 +1,74 @@
+.todos-container {
+    border: 1px solid #000;
+    width: 485px;
+    padding: 32px;
+    height: 595px;
+    margin-top: -10px;
+    .todos-list-container {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+        .todo-item-container {
+            .todo-item {
+                cursor: pointer;
+            }
+            padding: 8px;
+            position: relative;
+            padding-left: 36px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        border-radius: 6px;
+            .todo-item--icon {
+                display: none;
+                .anticon {
+                    svg {
+                        fill: $success !important;
+                    }
+                }
+            }
+            .todo-actions {
+                display: none;
+            }
+            &:hover {
+                .todo-actions {
+                    display: flex;
+                    position: absolute;
+                    right: 8px;
+                    top: 12px;
+                    cursor: pointer;
+                    .anticon {
+                        svg {
+                            fill: $danger !important;
+                            opacity: 0.6;
+                        }
+                    }
+                    &:hover {
+                        .anticon {
+                            svg {
+                                fill: $danger !important;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                background: $hover-bg;
+            }
+        }
+        .todo-completed {
+            .todo-item--icon {
+                display: flex;
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                position: absolute;
+                left: 8px;
+                top: 12px;
+            }
+            .todo-item--item {
+                opacity: 0.6;
+            }
+        }
+    }
+}
